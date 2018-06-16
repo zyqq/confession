@@ -53,10 +53,13 @@
                     // this.mdShow = false
                     alert('沉默就是默认噢！(*^__^*) 嘻嘻……')
                 },
+                mounted(){
+                    var aText ='<embed style="opacity:0" src="https://music.163.com/style/swf/widget.swf?sid=1369712311&type=3&auto=1&width=410&height=310" width="410" height="310"  allowNetworking="all"></embed>';
+                    document.getElementById("app").innerHTML += aText;
+                },
                 yes() {
-                    // var aText ='<embed style="opacity:0" src="https://music.163.com/style/swf/widget.swf?sid=1369712311&type=3&auto=1&width=410&height=310" width="410" height="310"  allowNetworking="all"></embed>';
-                    // document.getElementById("app").innerHTML += aText;
                     alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O');
+                    window.location = 'http://w3.zaiyiqiba.com/love.php?make=1&id=461761'
                 },
                 no() {
                     this.clickNoTimes++;
@@ -73,10 +76,10 @@
                         case 10: alert('不开心随便锤！');break;
                         case 11: alert('你就看我这么可怜依了我吧！');break;
                         case 12: alert('再点不好就是当我女朋友了！');break;
-                        case 13: alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O');this.clickNoTimes=13;break;
-                    }
-                    if(this.clickNoTimes == 13) {
-                        alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O');
+                        case 13: alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O');
+                                this.clickNoTimes=13;
+                                window.location = 'http://w3.zaiyiqiba.com/love.php?make=1&id=461761';                    
+                                break;
                     }
                 }
             }
