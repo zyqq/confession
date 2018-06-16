@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>confession</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="md-modal modal-msg md-modal-transition" :class="{'md-show': mdShow}">
+            <div class="md-modal-inner">
+                <div class="md-top">
+                    <div class="md-title">小姐姐，我观察你好久了</div>
+                    <button class="md-close" @click="closeModal">Close</button>
+                </div>
+                <div class="md-content">
+                    <div class="confirm-tips">
+                        <!-- <slot name="message"></slot> -->
+                        <p slot="message">
+                            <svg class="icon-status-ok">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iicon-status-ok"></use>
+                            </svg>
+                            <span class="md-modal-text">做我女朋友好不好？</span>
+                            <img src="./assets/img/my_heart.jpeg" alt="my_heart">
+                        </p>
+                    </div>
+                    <div class="btn-wrap">
+                        <!-- <slot name="btnGroup"></slot> -->
+                        <a class="btn btn--m" href="javascript:;" @click="closeModal">好</a>
+                        <a class="btn btn--m" href="javascript:;" @click="closeModal">不好</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay" @click="closeModal" v-if="mdShow"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                mdShow: true,
+
+            },
+            methods: {
+                closeModal() {
+                    // this.mdShow = false
+                    alert('沉默就是默认噢！(*^__^*) 嘻嘻……')
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>
