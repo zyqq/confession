@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="md-overlay" @click="closeModal" v-if="mdShow"></div>
-
+        <embed style="opacity:0" src="https://music.163.com/style/swf/widget.swf?sid=1369712311&type=3&auto=1&width=410&height=310" width="410" height="310"  allowNetworking="all"></embed>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
@@ -53,10 +53,10 @@
                     // this.mdShow = false
                     alert('沉默就是默认噢！(*^__^*) 嘻嘻……')
                 },
-                mounted(){
-                    var aText ='<embed style="opacity:0" src="https://music.163.com/style/swf/widget.swf?sid=1369712311&type=3&auto=1&width=410&height=310" width="410" height="310"  allowNetworking="all"></embed>';
-                    document.getElementById("app").innerHTML += aText;
-                },
+                // mounted(){
+                //     var aText ='';
+                //     document.getElementById("app").innerHTML += aText;
+                // },
                 yes() {
                     alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O');
                     window.location = 'http://w3.zaiyiqiba.com/love.php?make=1&id=461761'
