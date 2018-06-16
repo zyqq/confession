@@ -30,8 +30,8 @@
                     </div>
                     <div class="btn-wrap">
                         <!-- <slot name="btnGroup"></slot> -->
-                        <a class="btn btn--m" href="javascript:;" @click="closeModal">好</a>
-                        <a class="btn btn--m" href="javascript:;" @click="closeModal">不好</a>
+                        <a class="btn btn--m" href="javascript:;" @click="yes">好</a>
+                        <a class="btn btn--m" href="javascript:;" @click="no">不好</a>
 
                     </div>
                 </div>
@@ -45,14 +45,34 @@
             el: '#app',
             data: {
                 mdShow: true,
-
+                clickNoTimes: 0
             },
             methods: {
                 closeModal() {
                     // this.mdShow = false
                     alert('沉默就是默认噢！(*^__^*) 嘻嘻……')
+                },
+                yes() {
+                    alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O')
+                },
+                no() {
+                    this.clickNoTimes++;
+                    switch(this.clickNoTimes){
+                        case 1: alert('工资都归你！');break;
+                        case 2: alert('家务我来做！');break;
+                        case 3: alert('天天吃香喝辣！');break;
+                        case 4: alert('孩子我来生！');break;
+                        case 5: alert('房产证写你名字！');break;
+                        case 6: alert('帮你揉肩按摩！');break;
+                        case 7: alert('逛街让你一身轻！');break;
+                        case 8: alert('化妆品随意买！');break;
+                        case 9: alert('做我女朋友做梦都会笑醒！');break;
+                        case 10: alert('不开心随便锤！');break;
+                        case 11: alert('你就看我这么可怜依了我吧！');break;
+                        case 12: alert('再点不好就是当我女朋友了！');break;
+                        case 13: alert('小媳妇白又白，快到我的怀里来！O(∩_∩)O');this.clickNoTimes=13;break;
+                    }
                 }
-
             }
         })
     </script>
